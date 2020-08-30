@@ -5,12 +5,12 @@ class Solution {
   
   static int indexEqualsValueSearch(int[] arr) {
       int left = 0, right = arr.length-1;
-      while( left < right) {
+      while( left <= right) {
           int mid = left + (right - left) / 2;
           if (arr[mid] == mid) {
               return mid;
           } else if (arr[mid] > mid) {
-              right = mid;
+              right = mid-1;
           } else {
               left = mid+1;
           }
